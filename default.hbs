@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        {{! Document Settings }}
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        {{! Page Meta }}
+        <title>{{ meta_title }}</title>
+        <meta name="description" content="{{ meta_description }}" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {{! Styles'n'Scripts }}
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+
+        {{! Ghost outputs important style and meta data with this tag }}
+        {{ ghost_head }}
+
+    </head>
+    <body>
+
+        <div class="page-navigation">
+            <a class="description" href="/">
+                <h1 class="title">Maël Nison</h1>
+                <h2 class="subtitle">Search &amp; create</h2>
+            </a>
+            <ul class="social">
+                <li><a class="media github" href="https://github.com/arcanis">
+                    <i class="icon fa fa-github-alt"></i> Github
+                </a></li>
+                <li><a class="media twitter" href="https://twitter.com/arcanis">
+                    <i class="icon fa fa-twitter"></i> Twitter
+                </a></li>
+                <li><a class="media stackoverflow" href="http://stackoverflow.com/users/880703/mael-nison">
+                    <i class="icon fa fa-stack-overflow"></i> Stack Overflow
+                </a></li>
+                <li><a class="media linkedin" href="http://www.linkedin.com/in/maelnison">
+                    <i class="icon fa fa-linkedin"></i> LinkedIn
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="page-content">
+            {{! Everything else gets inserted here }}
+            {{{ body }}}
+        </div>
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ ghost_foot }}
+
+        {{! The main JavaScript file for Casper }}
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="http://arcanis.github.io/js.datefuzz/jquery.datefuzz.js"></script>
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    </body>
+</html>

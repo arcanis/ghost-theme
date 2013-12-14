@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Each post will be output using this markup }}
+{{#foreach posts}}
+    <section class="post post--default{{#if tags}} post--{{ tags separator=" post--" }}{{/if}}">
+        <header class="post-header">
+            <a class="link" href="{{ url }}">
+                <h3 class="title">{{ title }}</h3>
+                <time class="date datefuzz" datetime="{{ date format="YYYY-MM-DDTHH:mm:ss" }}Z">
+                    {{ date format="DD/MM/YYYY" }}
+                </time>
+            </a>
+        </header>
+        <section class="post-content">
+            <div class="post-container">
+                <article class="post-article">
+                    {{{ content }}}
+                </article>
+                <div class="post-tools">
+                    <a class="tool twitter" href="http://twitter.com/share?url={{ url }}&text=Blog+post+-+{{ title }}&via=arcanis" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="tool comment" href="#comments">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+{{/foreach}}
+
+{{!! After all the posts, we have the previous/next pagination links }}
+{{ pagination }}
