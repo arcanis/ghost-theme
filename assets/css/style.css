@@ -282,6 +282,9 @@ ul {
   font-size: 50px;
   color: #DADADA;
 }
+.post .post-tools .tool.comment {
+  display: none;
+}
 .post .post-tools .tool.twitter:hover {
   color: #80A9F3;
 }
