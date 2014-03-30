@@ -6,7 +6,7 @@
 
 {{! Each post will be output using this markup }}
 {{#foreach posts}}
-    <section class="post post--default{{#if tags}} post--{{ tags separator=" post--" }}{{/if}}">
+    <section class="{{ post_class }}">
         <header class="post-header">
             <a class="link" href="{{ url }}">
                 <h3 class="title">{{ title }}</h3>

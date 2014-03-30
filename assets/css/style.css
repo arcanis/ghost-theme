@@ -292,48 +292,48 @@ ul {
   color: #DBC312;
 }
 /**********************************/
-.post--default .post-header {
+.post .post-header {
   background-color: #767777;
 }
-.post--default .post-header .title::before {
+.post .post-header .title::before {
   background-image: url(/assets/images/icons/default.png);
 }
-.post--default .post-article a {
+.post .post-article a {
   color: #BEBEBE;
 }
-.post--traveling .post-header {
+.post.tag-traveling .post-header {
   background-color: #4AB6E9;
 }
-.post--traveling .post-header .title::before {
+.post.tag-traveling .post-header .title::before {
   background-image: url(/assets/images/icons/traveling.png);
 }
-.post--traveling .post-article a {
+.post.tag-traveling .post-article a {
   color: #4AB6E9;
 }
-.post--programming .post-header {
+.post.tag-programming .post-header {
   background-color: #FF7979;
 }
-.post--programming .post-header .title::before {
+.post.tag-programming .post-header .title::before {
   background-image: url(/assets/images/icons/programming.png);
 }
-.post--programming .post-article a {
+.post.tag-programming .post-article a {
   color: #FF7979;
 }
-.post--personal .post-header {
+.post.tag-personal .post-header {
   background-color: #73CA81;
 }
-.post--personal .post-header .title::before {
+.post.tag-personal .post-header .title::before {
   background-image: url(/assets/images/icons/personal.png);
 }
-.post--personal .post-article a {
+.post.tag-personal .post-article a {
   color: #73CA81;
 }
-.post--favorites .post-header {
+.post.tag-favorites .post-header {
   background-color: #EBDB8A;
 }
-.post--favorites .post-header .title::before {
+.post.tag-favorites .post-header .title::before {
   background-image: url(/assets/images/icons/favorites.png);
 }
-.post--favorites .post-article a {
+.post.tag-favorites .post-article a {
   color: #B9C529;
 }
