@@ -1,6 +1,7 @@
 @navigation-width: 300px;
 @content-max-width: 900px;
 @content-header-padding: 20px 30px 20px 30px;
+@content-header-height: 2.4em;
 @content-padding: 30px 120px 30px 30px;
 @pagination-padding: 30px;
 
@@ -57,18 +58,25 @@
 .post {
     .post-header {
         .link {
-            display: block;
-            overflow: hidden;
+            display: flex;
 
             max-width: @content-max-width;
 
             padding: @content-header-padding;
+
+            text-decoration: none;
+            line-height: @content-header-height;
         }
 
         .title {
-            float: left;
-
             margin: 0;
+            margin-right: 20px;
+
+            flex: auto;
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
 
             &::before {
                 display: inline-block;
@@ -86,9 +94,9 @@
         }
 
         .date {
-            float: right;
-
             margin: 0;
+
+            flex: none;
         }
     }
 
@@ -226,6 +234,7 @@
 .post {
     .post-header {
         background: url(/assets/images/header-background.png) top left no-repeat;
+        background-size: cover;
 
         .title, .date {
             color: #FFFFFF;
@@ -329,7 +338,7 @@
         blockquote {
             border: 3px solid #DBDBDB;
 
-            padding: 20px 0 20px 30px;
+            padding: 20px 30px 20px 30px;
 
             background: #F7F7F7;
         }

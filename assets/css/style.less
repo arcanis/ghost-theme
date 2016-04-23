@@ -22,5 +22,7 @@ ul {
 }
 
 @import "desktop.less";
-@import "responsive.less" handheld;
-@import "responsive.less" (max-width: 720px);
+
+@media handheld, (max-width: 720px) {
+    @import "responsive.less";
+}

@@ -26,6 +26,11 @@
     </head>
     <body>
 
+        <div class="page-content">
+            {{! Everything else gets inserted here }}
+            {{{ body }}}
+        </div>
+
         <div class="page-navigation">
             <a class="description" href="/">
                 <h1 class="title">Maël Nison</h1>
@@ -45,11 +50,6 @@
                     <i class="icon fa fa-linkedin"></i> LinkedIn
                 </a></li>
             </ul>
-        </div>
-
-        <div class="page-content">
-            {{! Everything else gets inserted here }}
-            {{{ body }}}
         </div>
 
         {{! Ghost outputs important scripts and data with this tag }}

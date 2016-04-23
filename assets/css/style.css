@@ -56,14 +56,19 @@ ul {
   padding-left: 300px;
 }
 .post .post-header .link {
-  display: block;
-  overflow: hidden;
+  display: flex;
   max-width: 900px;
   padding: 20px 30px 20px 30px;
+  text-decoration: none;
+  line-height: 2.4em;
 }
 .post .post-header .title {
-  float: left;
   margin: 0;
+  margin-right: 20px;
+  flex: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post .post-header .title::before {
   display: inline-block;
@@ -75,8 +80,8 @@ ul {
   vertical-align: middle;
 }
 .post .post-header .date {
-  float: right;
   margin: 0;
+  flex: none;
 }
 .post .post-container {
   position: relative;
@@ -173,6 +178,7 @@ ul {
 }
 .post .post-header {
   background: url(/assets/images/header-background.png) top left no-repeat;
+  background-size: cover;
 }
 .post .post-header .title,
 .post .post-header .date {
@@ -280,7 +286,7 @@ ul {
 }
 .post .post-article blockquote {
   border: 3px solid #DBDBDB;
-  padding: 20px 0 20px 30px;
+  padding: 20px 30px 20px 30px;
   background: #F7F7F7;
 }
 .post .post-tools .tool {
@@ -341,4 +347,20 @@ ul {
 }
 .post.tag-favorites .post-article a {
   color: #B9C529;
+}
+@media handheld, (max-width: 720px) {
+  .page-navigation {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+  }
+  .page-content {
+    padding-left: 0;
+  }
+  .post .post-container {
+    padding: 20px;
+  }
+  .post .post-tools {
+    display: none;
+  }
 }
